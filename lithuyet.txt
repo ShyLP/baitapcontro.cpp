@@ -1,3 +1,42 @@
 1. So sánh con biến con trỏ và biến thường, trình bày chi tiết các thành phần của biến con trỏ và biến thường
--Biến con trỏ chỉ để lưu địa chỉ
--Biến thường 
+-Biến con trỏ dùng để truy cập đến các địa chỉ nơi lưu các giá trị của biến
+-Biến thường là nơi lưu trữ địa chỉ và giá trị của nó
+-Thành phần biến con trỏ bao gồm địa chỉ, miền giá trị và giá trị
+-Thành phần biến thường: địa chỉ và giá trị
+2. Ta có int a = 5; địa chỉ của a là BAX03
+trình bày luồng chương trình khi gặp lệnh: 
+int *b = &a; 
+lệnh: cout<<b<<endl;
+lệnh: cout<<*b<<endl;
+lệnh: float *c = a;
+lệnh: a = 15; //trình bày các sự thay đổi liên quan
+==========================
+
+-int *b = &a;   >>>khởi tạo con trỏ biến b và đi đến địa chỉ của a
+-cout<<b<<endl;   >>>xuất ra địa chỉ của b tại BAX03
+-cout<<*b<<endl;  >>>xuất ra 5
+-float *c = a;  >>> lỗi, sai kiểu dữ liệu
+-a = 15;  >>>thay đổi giá trị a=15
+3. trình bày tính chất của biến thường và biến con trỏ trong phạm vi trỏ
+tại 1 thời điểm, con trỏ chỉ có thể trỏ đến 1 biến còn biến thì có thể được nhiều con trỏ trỏ đến
+4. Lợi ích của con trỏ ?
+-truyền tham số hiệu quả hơn
+-giúp hàm trả về nhiều hơn 1 giá trị
+-kiểm soát được vùng nhớ
+5. kích thước con trỏ là bao nhiêu ? trình bày chi tiết ?
+- kích thước con trỏ là 4 bytes và không thay đổi bởi các kiểu dữ liệu của con trỏ
+6. trình bày cú pháp của hàm trả về một con trỏ
+-kdlcontrỏ*tên hàm()
+//============================ Phần 1 ==================
+1. C: các hàm cấp phát nằm ở thư viện nào ?
+-stdlib.h 
+2 4. C: nguyên mẫu hàm của các hàm cấp phát
+-void* malloc(int size); cấp phát 1 vùng nhớ có kích thước size byte
+-void* calloc(int count,int size); Cấp phát count vùng nhớ, mỗi vùng có size byte. mặc định gt = 0
+-void* realloc(void *p,int size); Thay đổi kích thước bộ nhớ đã được cấp phát
+5: C++: cơ chế hoạt động của toán tử new
+-dùng để cấp phát bộ nhớ cho 1 con trỏ
+
+
+
+
